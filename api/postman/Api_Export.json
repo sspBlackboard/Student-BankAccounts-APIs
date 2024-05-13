@@ -1,0 +1,339 @@
+{
+	"info": {
+		"_postman_id": "20485a63-7155-4a7e-a721-38fad5688320",
+		"name": "Student-BankAccounts-APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23304628"
+	},
+	"item": [
+		{
+			"name": "get-bank-accounts",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{domain}}/ds/campusnexus/StudentBankAccounts",
+					"protocol": "https",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"ds",
+						"campusnexus",
+						"StudentBankAccounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-particular-bank-account",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{domain}}/ds/campusnexus/StudentBankAccounts({{accountId}})",
+					"protocol": "https",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"ds",
+						"campusnexus",
+						"StudentBankAccounts({{accountId}})"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-student-account-details",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{domain}}/ds/campusnexus/StudentBankAccounts/CampusNexus.GetStudentBankAccountDetails(studentId={{studentId}})",
+					"protocol": "https",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"ds",
+						"campusnexus",
+						"StudentBankAccounts",
+						"CampusNexus.GetStudentBankAccountDetails(studentId={{studentId}})"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-online-student-account-details",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{domain}}/ds/campusnexus/StudentBankAccounts/CampusNexus.GetOnlineStudentBankAccount(studentId={{studentId}})",
+					"protocol": "https",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"ds",
+						"campusnexus",
+						"StudentBankAccounts",
+						"CampusNexus.GetOnlineStudentBankAccount(studentId={{studentId}})"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-online-student-account-details Copy",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"payload\": {\n    \"data\": {\n      \"id\": {{accountId}},\n      \"accountType\": \"sampleAccountType\",\n      \"bankName\": \"sampleBankName\",\n      \"isPrimaryPayment\": sampleIsPrimaryPayment,\n      \"routingNumber\": \"sampleRoutingNumber\",\n      \"studentId\": {{studentId}},\n      \"transactionType\": \"sampleTransactionType\"\n    }\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{domain}}/api/commands/StudentAccounts/StudentBankAccount/create",
+					"protocol": "https",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"commands",
+						"StudentAccounts",
+						"StudentBankAccount",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-student-bank-account-details",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"payload\": {\n    \"id\": sampleId\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{domain}}/api/commands/StudentAccounts/StudentBankAccount/get",
+					"protocol": "https",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"commands",
+						"StudentAccounts",
+						"StudentBankAccount",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-student-bank-account-saveNew",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"payload\": {\n    \"AccountNumber\": \"sampleAccountNumber\",\n    \"accountType\": \"sampleAccountType\",\n    \"bankName\": \"sampleBankName\",\n    \"isPrimaryPayment\": sampleIsPrimaryPayment,\n    \"routingNumber\": \"sampleRoutingNumber\",\n    \"studentId\": sampleStudentId,\n    \"transactionType\": \"sampleTransactionType\"\n  }\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{domain}}/api/commands/StudentAccounts/StudentBankAccount/saveNew",
+					"protocol": "https",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"commands",
+						"StudentAccounts",
+						"StudentBankAccount",
+						"saveNew"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "username",
+			"value": "$USERNAME",
+			"type": "string"
+		},
+		{
+			"key": "password",
+			"value": "$PASSWORD",
+			"type": "string"
+		},
+		{
+			"key": "domain",
+			"value": "$DOMAIN",
+			"type": "string"
+		},
+		{
+			"key": "accountId",
+			"value": "$ACCOUNTID",
+			"type": "string"
+		},
+		{
+			"key": "studentId",
+			"value": "@STUDENTID",
+			"type": "string"
+		}
+	]
+}
