@@ -1,8 +1,8 @@
-# Student-BankAccounts-APIs
+# Student-StudentBankAccounts-APIs
 
 ## Description
 
-This project involves using Postman to authenticate the API requests for retrieving bank account details of a student.
+This project involves using Postman to authenticate the API requests for retrieving student bank account details of a student.
 
 ## Installation
 
